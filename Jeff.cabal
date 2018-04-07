@@ -1,0 +1,66 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: ff919da8c0cc32f316d14f48ff13cd88b5095752df45884ee4fda48c21b0a477
+
+name:           Jeff
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/Jeff#readme>
+homepage:       https://github.com/githubuser/Jeff#readme
+bug-reports:    https://github.com/githubuser/Jeff/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Jeff
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_Jeff
+  default-language: Haskell2010
+
+executable Jeff-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Jeff
+    , base >=4.7 && <5
+    , wave
+    , sdl2
+    , vector
+    , containers
+  other-modules:
+      Paths_Jeff
+  default-language: Haskell2010
+
+test-suite Jeff-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Jeff
+    , base >=4.7 && <5
+  other-modules:
+      Paths_Jeff
+  default-language: Haskell2010
