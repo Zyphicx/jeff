@@ -48,6 +48,7 @@ executable Jeff-exe
     , sdl2
     , vector
     , containers
+    , OpenAL
   other-modules:
       Paths_Jeff
   default-language: Haskell2010
